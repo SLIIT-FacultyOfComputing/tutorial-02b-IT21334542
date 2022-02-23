@@ -11,7 +11,7 @@ OtRate = 1500
 Type = 3
 OtRate = 1700
 Please Note that the input command in C++ is std::cin. This is a representation of the Keyboard.*/
-
+/*
 #include <stdio.h>
 int main()
 {
@@ -41,4 +41,46 @@ int main()
    printf("Net Salary is %f ", netSalary);
   
    return 0;
+}
+*/
+
+
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+
+  int salary,type,ot;
+
+  cout<<"ENTER SALARY::";
+  cin>>salary;
+  cout<<"ENETR OT TIME::";
+  cin>>ot;
+  cout<<"ENTER THE TYPE::";
+  cin>>type;
+
+
+  switch(type){
+    case 1: 
+      cout<<"YOU selected type 1";
+      ot=ot*1000;
+    break;
+    case 2:
+      cout<<"You selected type 2";
+      ot=ot*1500;
+    break;
+    default:
+      cout<<"You selected type 3";
+      ot=ot*1700;
+    break;
+    
+  }
+cout<<"Salary="<<salary<<endl<<"Type="<<type<<endl<<"OT_charge="<<ot<<endl<<endl<<endl<<"NET SALARY::"<<salary+ot;
+
+
+  
+  return 0;
 }
